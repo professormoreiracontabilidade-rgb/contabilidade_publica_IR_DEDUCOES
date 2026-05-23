@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz NBC TSP 01</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#eef3f8;
+  color:#222;
+}
+
+.app{
+  max-width:430px;
+  margin:auto;
+  min-height:100vh;
+  padding:14px;
+}
+
+.card{
+  background:white;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.15);
+  display:none;
+}
+
+.card.active{display:block}
+
+h1{
+  text-align:center;
+  background:#003b70;
+  color:white;
+  padding:16px;
+  border-radius:18px;
+  font-size:24px;
+}
+
+h2{
+  color:#003b70;
+  font-size:24px;
+}
+
+.meta{
+  background:#edf5ff;
+  padding:12px;
+  border-radius:14px;
+  font-size:15px;
+  margin-bottom:14px;
+  line-height:1.5;
+}
+
+.question{
+  font-size:20px;
+  line-height:1.45;
+  font-weight:bold;
+}
+
+.alt{
+  background:#f5f5f5;
+  margin:10px 0;
+  padding:14px;
+  border-radius:14px;
+  font-size:18px;
+  border-left:6px solid #bbb;
+}
+
+.correct{
+  background:#e6f8ea;
+  border-left-color:#15803d;
+  font-weight:bold;
+}
+
+.explain{
+  font-size:19px;
+  line-height:1.55;
+}
+
+.box{
+  background:#fff3cd;
+  padding:14px;
+  border-radius:14px;
+  margin:14px 0;
+  font-size:18px;
+  line-height:1.5;
+}
+
+img{
+  width:100%;
+  border-radius:18px;
+  border:1px solid #ddd;
+  margin-top:12px;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+
+button{
+  flex:1;
+  border:0;
+  border-radius:14px;
+  padding:14px;
+  font-size:17px;
+  font-weight:bold;
+  background:#003b70;
+  color:white;
+  cursor:pointer;
+}
+
+button.secondary{background:#555}
+
+.footer{
+  margin-top:16px;
+  text-align:center;
+  font-weight:bold;
+  color:#003b70;
+  font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>Quiz NBC TSP 01</h1>
+
+<!-- TELA 1 -->
+<div class="card active" id="tela1">
+
+  <div class="meta">
+    Ano: 2026<br>
+    Banca: FGV<br>
+    Órgão: PC-PI<br>
+    Prova: Perito Criminal - Contabilidade e Economia
+  </div>
+
+  <div class="question">
+    Os contribuintes de uma jurisdição têm direito a deduzir os gastos com saúde da base de cálculo da tributação sobre a renda.
+    De acordo com a NBC TSP 01 - Receita de Transação sem Contraprestação, esses gastos tributários, para o governo tributante,
+  </div>
+
+  <div class="alt">A) são classificados como ativo e despesa.</div>
+  <div class="alt">B) correspondem a ativo e receita.</div>
+  <div class="alt">C) representam passivo e despesa.</div>
+  <div class="alt">D) configuram receita e despesa.</div>
+  <div class="alt correct">E) não originam entradas ou saídas de recursos.</div>
+
+  <div class="buttons">
+    <button onclick="mostrarTela(2)">Ver explicação ➜</button>
+  </div>
+
+</div>
+
+<!-- TELA 2 -->
+<div class="card" id="tela2">
+
+  <h2>Gabarito: Letra E</h2>
+
+  <div class="explain">
+    De acordo com a NBC TSP 01, os gastos tributários são benefícios previstos em lei, como deduções, isenções ou créditos tributários.
+    <br><br>
+    No caso da questão, o contribuinte pode deduzir gastos com saúde antes de pagar o imposto.
+  </div>
+
+  <div class="box">
+    A grande ideia é: o governo não recebe o valor cheio para depois devolver uma parte.
+    O valor da dedução simplesmente não entra nos cofres públicos.
+  </div>
+
+  <div class="explain">
+    Por isso, os gastos tributários não são registrados como:
+    <br><br>
+    ❌ ativo<br>
+    ❌ passivo<br>
+    ❌ receita<br>
+    ❌ despesa
+    <br><br>
+    Eles apenas reduzem o valor que será arrecadado.
+  </div>
+
+  <div class="buttons">
+    <button class="secondary" onclick="mostrarTela(1)">⬅ Voltar</button>
+    <button onclick="mostrarTela(3)">Ver imagem ➜</button>
+  </div>
+
+</div>
+
+<!-- TELA 3 -->
+<div class="card" id="tela3">
+
+  <h2>Resumo Visual</h2>
+
+  <div class="explain">
+    Exemplo simples:
+    <br><br>
+    Se o imposto seria de R$ 100, mas existe uma dedução de saúde de R$ 20, o contribuinte paga apenas R$ 80.
+    <br><br>
+    Os R$ 20 não entram e também não saem do governo.
+  </div>
+
+  <img src="gasto-tributario.png" alt="Imagem explicativa sobre gasto tributário">
+
+  <div class="box">
+    Macete de prova: gasto tributário é renúncia fiscal.
+    Não gera entrada nem saída de recursos.
+  </div>
+
+  <div class="buttons">
+    <button class="secondary" onclick="mostrarTela(2)">⬅ Voltar</button>
+    <button onclick="mostrarTela(1)">Recomeçar</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  Curso de Contabilidade Professor Moreira<br>
+  WhatsApp: (61) 98532-3574
+</div>
+
+</div>
+
+<script>
+function mostrarTela(numero){
+  document.querySelectorAll('.card').forEach(card=>{
+    card.classList.remove('active');
+  });
+
+  document.getElementById('tela' + numero).classList.add('active');
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+</script>
+
+</body>
+</html>
