@@ -11,7 +11,7 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#eef3f8;
+  background:#eaf1f8;
   color:#222;
 }
 
@@ -24,10 +24,11 @@ body{
 
 .card{
   background:white;
-  border-radius:22px;
+  border-radius:24px;
   padding:18px;
   box-shadow:0 8px 22px rgba(0,0,0,.15);
   display:none;
+  margin-bottom:14px;
 }
 
 .card.active{display:block}
@@ -90,11 +91,18 @@ h2{
   line-height:1.5;
 }
 
-img{
-  width:100%;
+.image-box{
+  background:#f7fbff;
+  padding:10px;
   border-radius:18px;
-  border:1px solid #ddd;
+  border:2px solid #d3e4f5;
   margin-top:12px;
+}
+
+.image-box img{
+  width:100%;
+  display:block;
+  border-radius:14px;
 }
 
 .buttons{
@@ -133,7 +141,6 @@ button.secondary{background:#555}
 
 <h1>Quiz NBC TSP 01</h1>
 
-<!-- TELA 1 -->
 <div class="card active" id="tela1">
 
   <div class="meta">
@@ -160,7 +167,6 @@ button.secondary{background:#555}
 
 </div>
 
-<!-- TELA 2 -->
 <div class="card" id="tela2">
 
   <h2>Gabarito: Letra E</h2>
@@ -194,7 +200,6 @@ button.secondary{background:#555}
 
 </div>
 
-<!-- TELA 3 -->
 <div class="card" id="tela3">
 
   <h2>Resumo Visual</h2>
@@ -207,7 +212,9 @@ button.secondary{background:#555}
     Os R$ 20 não entram e também não saem do governo.
   </div>
 
-  <img src="gasto-tributario.png" alt="Imagem explicativa sobre gasto tributário">
+  <div class="image-box">
+    <img src="./gasto-tributario.png" alt="Resumo visual sobre gasto tributário">
+  </div>
 
   <div class="box">
     Macete de prova: gasto tributário é renúncia fiscal.
